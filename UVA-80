@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+    int n,sum,sub,a,b,i;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d %d",&sum,&sub);
+        if(sum<sub) printf("impossible\n");
+        else
+        {
+            a=(sum+sub)/2;
+            b=(sum-sub)/2;
+            if(a+b==sum && a-b==sub)
+            {
+                printf("%d %d\n",a,b);
+            }
+            else
+            {
+                printf("impossible\n");
+            }
+        }
+    }
+    return 0;
+}
